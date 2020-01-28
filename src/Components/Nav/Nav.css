@@ -3,8 +3,8 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    background-color: #1b1e33;
-    border-bottom: 1px solid rgba(230, 125, 39, 0.438);
+    background-color: white;
+    border-bottom: 1px solid rgba(167, 167, 167, 0.438);
     display: flex;
     justify-content: space-evenly;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
