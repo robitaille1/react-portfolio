@@ -17,11 +17,12 @@ nav {
     text-decoration: none;
     color: rgb(184, 182, 182);
     padding: 10px;
+    transition: ease-in .3s;
 }
 
 .nav-top a:hover {
     background-color: rgb(184, 182, 182);
-    color: #00020e;
+    color: #ffffff;
 }
 
 @media only screen and (min-width: 700px){
