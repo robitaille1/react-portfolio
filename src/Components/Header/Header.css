@@ -24,3 +24,9 @@ h1 {
 .accent {
     color: rgb(230, 124, 39);
 }   
+
+@media only screen and (min-width: 700px){
+    .head {
+      padding: 50px 100px 5px 100px;
+    }
+}
