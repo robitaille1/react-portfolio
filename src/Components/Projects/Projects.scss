@@ -1,0 +1,53 @@
+hr {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  background-image: -webkit-linear-gradient(left, #333, #ccc, #333);
+  background-image: -moz-linear-gradient(left, #333, #ccc, #333);
+  background-image: -ms-linear-gradient(left, #333, #ccc, #333);
+  background-image: -o-linear-gradient(left, #333, #ccc, #333);
+  width: 50%;
+}
+
+.proj-head {
+  margin-top: 45px;
+}
+
+.projects {
+  text-align: center;
+  border: 1px solid rgb(184, 182, 182);
+}
+
+.project-title {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-weight: bold;
+  // color: rgb(230, 124, 39);
+}
+
+.project-item {
+  padding: 10px;
+  margin: auto;
+}
+
+.project-item a {
+  text-decoration: none;
+  color: rgb(184, 182, 182);
+  margin: 0 5px;
+}
+
+.project-item a:hover {
+  // color: rgb(230, 124, 39);
+  color: darkslategrey;
+}
+
+.project-image {
+  width: 90%;
+  height: auto;
+}
+
+.app-desc {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
