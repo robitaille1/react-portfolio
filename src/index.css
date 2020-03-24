@@ -2,14 +2,15 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Karla', sans-serif;
+  /* font-family: 'Karla', sans-serif; */
+  font-family: "Maven Pro", sans-serif;
   line-height: 1.5;
   background-color: #ffffff;
   color: rgb(184, 182, 182);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -17,7 +18,7 @@ code {
   box-sizing: border-box;
 }
 
-@media only screen and (min-width: 700px){
+@media only screen and (min-width: 700px) {
   body {
     text-align: center;
   }
