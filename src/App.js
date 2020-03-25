@@ -1,20 +1,28 @@
-import React from "react";
-// import Nav from "./Components/Nav/Nav";
-import Header from "./Components/Header/Header";
-// import Bio from "./Components/Bio/Bio";
-// import Tech from "./Components/Tech/Tech";
-// import Projects from "./Components/Projects/Projects";
-// import Contact from "./Components/Contact/Contact";
+import React, { useState, useRef } from "react";
+import { useOnClickOutside } from "./hooks";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "./global";
+import { theme } from "./theme";
+import { Burger, Menu, Header, Bio, Tech } from "./Components";
 
-const app = () => (
-  <>
-    {/* <Nav /> */}
-    <Header />
-    {/* <Bio />
-    <Tech />
-    <Projects />
-    <Contact /> */}
-  </>
-);
+function App() {
+  const node = useRef();
+  useOnClickOutside(node, () => setOpen(false));
+  const [open, setOpen] = useState(false);
+  return (
+    <ThemeProvider theme={theme}>
+      <>
+        <GlobalStyles />
+        <Header />
+        <Bio />
+        <Tech />
+        <div ref={node}>
+          <Burger open={open} setOpen={setOpen} />
+          <Menu open={open} setOpen={setOpen} />
+        </div>
+      </>
+    </ThemeProvider>
+  );
+}
 
-export default app;
+export default App;
