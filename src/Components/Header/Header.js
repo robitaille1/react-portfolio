@@ -19,6 +19,35 @@ const header = () => (
       </a>
     </Navigation>
 
+    <Social>
+      <a
+        href="https://github.com/robitaille1"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i className="fab fa-github"></i>
+      </a>
+      <a href="mailto:lucas.robitaille@yahoo.com" className="link">
+        <i className="link far fa-envelope"></i>
+      </a>
+      <a
+        className="link"
+        href="https://www.linkedin.com/in/lucas-robitaille/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i className="link fab fa-linkedin"></i>
+      </a>
+      <a
+        className="link"
+        href="https://angel.co/lucas-robitaille"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i className="link fab fa-angellist"></i>
+      </a>
+    </Social>
+
     <Header>
       <div>
         <Fade up>
@@ -45,16 +74,15 @@ const Wrapper = styled.div`
 `;
 
 const Header = styled.section`
-  /* margin: 70px auto 0px auto; */
   padding: 4em 4em 0px 4em;
-  height: 100vh;
+  height: 70vh;
   h1 {
-    margin-top: 160px;
+    margin-top: 30px;
     margin-bottom: 0px;
     font-size: 3em;
     @media (min-width: ${({ theme }) => theme.mobile}) {
       font-size: 4em;
-      margin-top: 100px;
+      margin-top: 50px;
     }
   }
   p {
@@ -68,15 +96,17 @@ const Navigation = styled.nav`
   display: none;
   @media (min-width: ${({ theme }) => theme.mobile}) {
     display: block;
+    width: 50%;
+    margin: 0px auto;
   }
   a {
     font-size: 1.2em;
     margin: 15px 25px;
     text-decoration: none;
     color: ${({ theme }) => theme.primaryLight};
-
+    transition: 0.3s;
     &:hover {
-      color: ${({ theme }) => theme.accent};
+      color: ${({ theme }) => theme.primaryHover};
     }
   }
 `;
@@ -85,5 +115,26 @@ const Location = styled.span`
   display: block;
   @media (min-width: ${({ theme }) => theme.mobile}) {
     display: inline;
+  }
+`;
+
+const Social = styled.div`
+  margin-top: 90px;
+  text-align: center;
+  @media (min-width: ${({ theme }) => theme.mobile}) {
+    margin-top: 0px;
+  }
+  a {
+    margin: 25px;
+    font-size: 30px;
+    color: ${({ theme }) => theme.primaryLight};
+    @media (min-width: ${({ theme }) => theme.mobile}) {
+      margin-top: 0px;
+      transition: 0.3s;
+      color: ${({ theme }) => theme.primaryHover};
+      &:hover {
+        color: ${({ theme }) => theme.primaryLight};
+      }
+    }
   }
 `;
