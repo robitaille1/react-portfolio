@@ -74,8 +74,9 @@ const Wrapper = styled.div`
 `;
 
 const Header = styled.section`
-  padding: 4em 4em 0px 4em;
+  padding: 4em 1em 0px 1em;
   height: 70vh;
+  margin-left: 30px;
   h1 {
     margin-top: 0px;
     margin-bottom: 0px;
