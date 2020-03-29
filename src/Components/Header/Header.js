@@ -77,7 +77,7 @@ const Header = styled.section`
   padding: 4em 4em 0px 4em;
   height: 70vh;
   h1 {
-    margin-top: 30px;
+    margin-top: 0px;
     margin-bottom: 0px;
     font-size: 3em;
     @media (min-width: ${({ theme }) => theme.mobile}) {
