@@ -96,7 +96,7 @@ const Navigation = styled.nav`
   display: none;
   @media (min-width: ${({ theme }) => theme.mobile}) {
     display: block;
-    width: 50%;
+    width: 100%;
     margin: 0px auto;
   }
   a {
