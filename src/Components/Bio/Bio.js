@@ -22,10 +22,11 @@ const bio = () => (
 export default bio;
 
 const Content = styled.div`
-  padding: 0px 3em 50px 3em;
+  padding: 0px 1em 50px em;
   text-align: left;
   color: ${({ theme }) => theme.primaryDark};
   background: lightgrey;
+  margin-bottom: -1px;
   margin-top: -1px;
   @media (min-width: ${({ theme }) => theme.mobile}) {
     padding: 50px 8em 100px 8em;
