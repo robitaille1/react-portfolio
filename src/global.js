@@ -20,10 +20,10 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Baloo Chettan 2', cursive;
   }
   div {
-    text-align: center;
-    /* @media (min-width: ${({ theme }) => theme.mobile}){
+    text-align: left;
+    @media (min-width: ${({ theme }) => theme.mobile}){
       text-align: center;
-    } */
+    }
   }
   a {
     color: ${({ theme }) => theme.primaryHover};
