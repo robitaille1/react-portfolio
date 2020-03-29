@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 
 const bio = () => (
-  <Content>
+  <Content name="Bio">
     <Fade up>
       <h2>About Me</h2>
       <p>
