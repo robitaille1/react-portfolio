@@ -17,7 +17,7 @@ const tech = () => (
     <h2>Technologies</h2>
 
     <Tech>
-      <div>
+      <TechWrapper>
         <h4>Frontend</h4>
         <Frontend>
           <img src={htmlLogo} alt="Html Logo" />
@@ -28,17 +28,17 @@ const tech = () => (
           <img src={reactLogo} alt="React Logo" />
           <img src={reduxLogo} alt="Redux Logo" />
         </Frontend>
-      </div>
+      </TechWrapper>
 
-      <div>
+      <TechWrapper style={{ marginRight: "0px" }}>
         <h4>Backend</h4>
         <Backend>
           <img src={nodeLogo} alt="Nodejs Logo" />
           <img src={expressLogo} alt="Express Logo" />
-          <PostImg src={postLogo} alt="PostgreSQL Logo" />
+          <img style={{ width: "20%" }} src={postLogo} alt="PostgreSQL Logo" />
           <img src={mongoLogo} alt="Mongo Logo" />
         </Backend>
-      </div>
+      </TechWrapper>
     </Tech>
   </Wrapper>
 );
@@ -59,7 +59,7 @@ const Wrapper = styled.section`
   h2 {
     font-size: 2.3rem;
     width: 100%;
-    text-align: left;
+    text-align: center;
     color: ${({ theme }) => theme.primaryDark};
   }
   h4 {
@@ -75,7 +75,22 @@ const Tech = styled.div`
   border-radius: 5px;
   @media (min-width: ${({ theme }) => theme.mobile}) {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-direction: row;
+  }
+`;
+
+const TechWrapper = styled.div`
+  background: white;
+  border-right: 1px solid lightgrey;
+  border-radius: 1rem;
+  width: 100%;
+  padding-top: 20px;
+  margin-bottom: 1rem;
+  @media (min-width: ${({ theme }) => theme.mobile}) {
+    width: 50%;
+    margin-right: 10px;
+    padding-top: 00px;
   }
 `;
 
@@ -85,13 +100,15 @@ const Frontend = styled.div`
   @media (min-width: ${({ theme }) => theme.mobile}) {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
   }
   img {
     width: 75%;
     margin: 20px auto;
     @media (min-width: ${({ theme }) => theme.mobile}) {
-      width: 10%;
-      height: 10%;
+      width: 15%;
+      margin: 20px 10px;
     }
   }
 `;
@@ -102,20 +119,14 @@ const Backend = styled.div`
   @media (min-width: ${({ theme }) => theme.mobile}) {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
   img {
     width: 80%;
     margin: 20px auto;
     @media (min-width: ${({ theme }) => theme.mobile}) {
-      width: 10%;
-      /* height: 10%; */
+      width: 20%;
+      margin: 30px auto;
     }
-  }
-`;
-
-const PostImg = styled.img`
-  width: 40%;
-  @media (min-width: ${({ theme }) => theme.mobile}) {
-    width: 10%;
   }
 `;
