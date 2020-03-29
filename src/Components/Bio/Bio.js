@@ -22,7 +22,7 @@ const bio = () => (
 export default bio;
 
 const Content = styled.div`
-  padding: 0px 1em 50px em;
+  padding: 0px 1em 50px 1em;
   text-align: left;
   color: ${({ theme }) => theme.primaryDark};
   background: lightgrey;
