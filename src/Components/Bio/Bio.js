@@ -30,6 +30,7 @@ const Content = styled.div`
   margin-top: -1px;
   @media (min-width: ${({ theme }) => theme.mobile}) {
     padding: 50px 8em 100px 8em;
+    margin-bottom: 0px;
   }
   h2 {
     font-size: 2.3rem;
