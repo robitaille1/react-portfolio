@@ -35,7 +35,7 @@ const tech = () => (
         <Backend>
           <img src={nodeLogo} alt="Nodejs Logo" />
           <img src={expressLogo} alt="Express Logo" />
-          <img style={{ width: "20%" }} src={postLogo} alt="PostgreSQL Logo" />
+          <img src={postLogo} alt="PostgreSQL Logo" />
           <img src={mongoLogo} alt="Mongo Logo" />
         </Backend>
       </TechWrapper>
@@ -127,6 +127,12 @@ const Backend = styled.div`
     @media (min-width: ${({ theme }) => theme.mobile}) {
       width: 20%;
       margin: 30px auto;
+    }
+  }
+  & :nth-child(3) {
+    width: 40%;
+    @media (min-width: ${({ theme }) => theme.mobile}) {
+      width: 20%;
     }
   }
 `;
