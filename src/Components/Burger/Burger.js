@@ -14,7 +14,6 @@ const Burger = ({ open, setOpen }) => {
 export default Burger;
 
 const StyledBurger = styled.button`
-  position: absolute;
   top: 5%;
   left: 2rem;
   display: flex;
@@ -27,7 +26,7 @@ const StyledBurger = styled.button`
   cursor: pointer;
   padding: 0;
   z-index: 10;
-
+  position: ${({ open }) => (open ? "fixed" : "absolute")};
   @media (min-width: ${({ theme }) => theme.mobile}) {
     display: none;
   }
