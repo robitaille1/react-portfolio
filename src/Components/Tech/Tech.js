@@ -49,7 +49,7 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   padding: 0px 1em 50px 1em;
-  background: lightgrey;
+  /* background: lightgrey; */
   align-items: center;
 
   @media (min-width: ${({ theme }) => theme.mobile}) {
@@ -60,7 +60,7 @@ const Wrapper = styled.section`
     font-size: 2.3rem;
     width: 100%;
     text-align: center;
-    color: ${({ theme }) => theme.primaryDark};
+    color: ${({ theme }) => theme.primaryLight};
   }
   h4 {
     margin: 20px auto;
@@ -81,7 +81,7 @@ const Tech = styled.div`
 `;
 
 const TechWrapper = styled.div`
-  background: white;
+  background: lightgrey;
   border-right: 1px solid lightgrey;
   border-radius: 1rem;
   width: 100%;
