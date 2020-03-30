@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled, { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./global";
 import { theme } from "./theme";
 import { Burger, Menu, Header, Bio, Tech } from "./Components";
@@ -11,7 +11,7 @@ function App() {
       <>
         <GlobalStyles open={open} />
         <Header />
-        <FadeDiv />
+        {/* <FadeDiv /> */}
         <Bio />
         <Tech />
         <div>
@@ -25,8 +25,8 @@ function App() {
 
 export default App;
 
-const FadeDiv = styled.div`
-  width: 100%;
-  height: 200px;
-  background-image: linear-gradient(#2b343f, lightGrey);
-`;
+// const FadeDiv = styled.div`
+//   width: 100%;
+//   height: 200px;
+//   background-image: linear-gradient(#2b343f, lightGrey);
+// `;
