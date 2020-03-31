@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./global";
 import { theme } from "./theme";
-import { Burger, Menu, Header, Bio, Tech } from "./Components";
+import { Burger, Menu, Header, Bio, Tech, Projects } from "./Components";
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -14,6 +14,7 @@ function App() {
         {/* <FadeDiv /> */}
         <Bio />
         <Tech />
+        <Projects />
         <div>
           <Burger open={open} setOpen={setOpen} />
           <Menu open={open} setOpen={setOpen} />
