@@ -4,6 +4,7 @@ import Project from "./Project/Project";
 import puerhImg from "../../Assets/mockups/puerh-mockup.png";
 import hotImg from "../../Assets/mockups/hot-takes-mockup.png";
 import travelImg from "../../Assets/mockups/travel-mockup.png";
+import { Projects } from "..";
 
 const projectItm = [
   {
@@ -39,6 +40,11 @@ const projectItm = [
 const projects = () => (
   <Wrapper>
     <h2>Projects</h2>
+    <div>
+      {projectItm.map((project, i) => (
+        <Project data={project} key={i} />
+      ))}
+    </div>
   </Wrapper>
 );
 
