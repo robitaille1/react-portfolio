@@ -9,12 +9,7 @@ const header = () => (
       <a href="#About">About</a>
       <a href="#Projects">Projects</a>
       <a href="#Contact">Contact</a>
-      <a
-        className="resume-link"
-        href={resume}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href={resume} target="_blank" rel="noopener noreferrer">
         Resume
       </a>
     </Navigation>
@@ -27,11 +22,10 @@ const header = () => (
       >
         <i className="fab fa-github"></i>
       </a>
-      <a href="mailto:lucas.robitaille@yahoo.com" className="link">
+      <a href="mailto:lucas.robitaille@yahoo.com">
         <i className="link far fa-envelope"></i>
       </a>
       <a
-        className="link"
         href="https://www.linkedin.com/in/lucas-robitaille/"
         target="_blank"
         rel="noopener noreferrer"
@@ -39,7 +33,6 @@ const header = () => (
         <i className="link fab fa-linkedin"></i>
       </a>
       <a
-        className="link"
         href="https://angel.co/lucas-robitaille"
         target="_blank"
         rel="noopener noreferrer"
