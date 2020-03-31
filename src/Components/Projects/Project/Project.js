@@ -13,7 +13,9 @@ const project = props => (
         <img src={props.data.image} alt={props.data.title + "image"} />
       </div>
       <div style={{ textAlign: "center", marginTop: "30px" }}>
-        <a href={props.data.link}>Live Link</a>
+        <a active="true" href={props.data.link}>
+          Live Link
+        </a>
         <a href={props.data.clientRepo}>Client Repo</a>
         {props.data.apiRepo ? <a href={props.data.apiRepo}>Api Repo</a> : null}
       </div>
@@ -45,11 +47,11 @@ const Card = styled.div`
   a {
     border: 1px solid #374458;
     color: white;
-    background: ${({ theme }) => theme.primaryDark};
+    /* background: ${({ theme }) => theme.primaryDark}; */
     padding: 10px;
     border-radius: 5px;
     margin: 0px 5px;
-
+    background: ${({ theme }) => theme.primaryDark} ;
     &:hover {
       background: ${({ theme }) => theme.primaryHover};
     }
