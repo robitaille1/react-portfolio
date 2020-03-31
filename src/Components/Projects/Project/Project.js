@@ -3,11 +3,11 @@ import styled from "styled-components";
 
 const project = props => (
   <Card>
-    <ImgDiv>
+    <DescDiv>
       <h3>{props.data.title}</h3>
       <p>{props.data.description}</p>
       <p>Built with: {props.data.tech}</p>
-    </ImgDiv>
+    </DescDiv>
     <ImgDiv>
       <div style={{ textAlign: "center" }}>
         <img src={props.data.image} alt={props.data.title + "image"} />
@@ -58,15 +58,19 @@ const Card = styled.div`
   }
 `;
 
+const DescDiv = styled.div`
+  text-align: left;
+  @media (min-width: ${({ theme }) => theme.mobile}) {
+    text-align: center;
+  }
+`;
+
 const ImgDiv = styled.div`
   text-align: center;
   @media (min-width: ${({ theme }) => theme.mobile}) {
     width: 50%;
   }
   img {
-    width: 75%;
-    @media (min-width: ${({ theme }) => theme.mobile}) {
-      width: 100%;
-    }
+    width: 100%;
   }
 `;
