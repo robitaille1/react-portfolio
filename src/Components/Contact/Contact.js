@@ -1,42 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import Social from "../Social/Social";
 
 const contact = () => (
   <Wrapper name="Contact">
-    <h2 className="heading">Contact</h2>
-    <div className="contact-icons">
-      <div className="contact-i">
-        <a href="mailto:lucas.robitaille@yahoo.com" className="link">
-          <i className="link far fa-envelope"></i>
-        </a>
-        <a
-          className="link"
-          href="https://github.com/robitaille1"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="link fab fa-github"></i>
-        </a>
-      </div>
-      <div className="contact-i">
-        <a
-          className="link"
-          href="https://www.linkedin.com/in/lucas-robitaille/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="link fab fa-linkedin"></i>
-        </a>
-        <a
-          className="link"
-          href="https://angel.co/lucas-robitaille"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="link fab fa-angellist"></i>
-        </a>
-      </div>
-    </div>
+    <Social />
 
     <form name="contact" method="POST" data-netlify="true">
       <label htmlFor="name">Name:</label>
