@@ -1,8 +1,8 @@
 import React from "react";
-import "./Contact.scss";
+import styled from "styled-components";
 
 const contact = () => (
-  <section role="form" className="contact" id="Contact">
+  <Wrapper name="Contact">
     <h2 className="heading">Contact</h2>
     <div className="contact-icons">
       <div className="contact-i">
@@ -48,7 +48,11 @@ const contact = () => (
       <input type="text" name="message" placeholder="Enter message....." />
       <button type="submit">Send</button>
     </form>
-  </section>
+  </Wrapper>
 );
 
 export default contact;
+
+const Wrapper = styled.section`
+  text-align: center;
+`;

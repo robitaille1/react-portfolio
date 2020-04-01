@@ -2,7 +2,15 @@ import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./global";
 import { theme } from "./theme";
-import { Burger, Menu, Header, Bio, Tech, Projects } from "./Components";
+import {
+  Burger,
+  Menu,
+  Header,
+  Bio,
+  Tech,
+  Projects,
+  Contact
+} from "./Components";
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -15,6 +23,7 @@ function App() {
         <Bio />
         <Tech />
         <Projects />
+        <Contact />
         <div>
           <Burger open={open} setOpen={setOpen} />
           <Menu open={open} setOpen={setOpen} />
