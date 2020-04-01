@@ -34,7 +34,7 @@ const Menu = ({ open, setOpen }) => {
         to="Contact"
         spy={true}
         smooth={true}
-        duration={1000}
+        duration={3000}
         onClick={() => setOpen(!open)}
       >
         <span role="img" aria-label="contact">
