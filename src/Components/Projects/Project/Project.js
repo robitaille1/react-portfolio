@@ -60,8 +60,10 @@ const Card = styled.div`
 
 const DescDiv = styled.div`
   text-align: left;
+  width: 100%;
   @media (min-width: ${({ theme }) => theme.mobile}) {
     text-align: center;
+    width: 50%;
   }
 `;
 
