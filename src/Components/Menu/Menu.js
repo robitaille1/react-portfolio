@@ -22,7 +22,7 @@ const Menu = ({ open, setOpen }) => {
         to="Projects"
         spy={true}
         smooth={true}
-        duration={1000}
+        duration={2000}
         onClick={() => setOpen(!open)}
       >
         <span role="img" aria-label="projects">

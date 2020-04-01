@@ -37,7 +37,7 @@ const projectItm = [
 ];
 
 const projects = () => (
-  <Wrapper>
+  <Wrapper name="Projects">
     <h2>Projects</h2>
     <div>
       {projectItm.map((project, i) => (
