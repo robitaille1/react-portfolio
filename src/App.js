@@ -9,7 +9,8 @@ import {
   Bio,
   Tech,
   Projects,
-  Contact
+  Contact,
+  Footer
 } from "./Components";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Tech />
         <Projects />
         <Contact />
+        <Footer />
         <div>
           <Burger open={open} setOpen={setOpen} />
           <Menu open={open} setOpen={setOpen} />
