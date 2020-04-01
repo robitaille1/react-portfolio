@@ -13,11 +13,30 @@ const project = props => (
         <img src={props.data.image} alt={props.data.title + "image"} />
       </div>
       <div style={{ textAlign: "center", marginTop: "30px" }}>
-        <a active="true" href={props.data.link}>
+        <a
+          active="true"
+          href={props.data.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Live Link
         </a>
-        <a href={props.data.clientRepo}>Client Repo</a>
-        {props.data.apiRepo ? <a href={props.data.apiRepo}>Api Repo</a> : null}
+        <a
+          href={props.data.clientRepo}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Client Repo
+        </a>
+        {props.data.apiRepo ? (
+          <a
+            href={props.data.apiRepo}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Api Repo
+          </a>
+        ) : null}
       </div>
     </ImgDiv>
   </Card>
