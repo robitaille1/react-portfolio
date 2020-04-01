@@ -1,14 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 import { Fade } from "react-reveal";
+import { Link } from "react-scroll";
 import resume from "../../Assets/LucasRobitaille-Web-Developer-Resume.pdf";
 
 const header = () => (
   <Wrapper>
     <Navigation role="navigation">
-      <a href="#About">About</a>
-      <a href="#Projects">Projects</a>
-      <a href="#Contact">Contact</a>
+      <Link to="Bio" spy={true} smooth={true} duration={1000}>
+        About
+      </Link>
+      <Link to="Projects" spy={true} smooth={true} duration={2000}>
+        Projects
+      </Link>
+      <Link to="Contact" spy={true} smooth={true} duration={3000}>
+        Contact
+      </Link>
       <a href={resume} target="_blank" rel="noopener noreferrer">
         Resume
       </a>
@@ -99,6 +106,7 @@ const Navigation = styled.nav`
     text-decoration: none;
     color: ${({ theme }) => theme.primaryLight};
     transition: 0.3s;
+    cursor: pointer;
     &:hover {
       color: ${({ theme }) => theme.primaryHover};
     }
