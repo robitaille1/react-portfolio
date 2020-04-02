@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+// import Button from "../../UI/Button/Button";
 
 const project = props => (
   <Card>
@@ -13,29 +14,30 @@ const project = props => (
         <img src={props.data.image} alt={props.data.title + "image"} />
       </div>
       <div style={{ textAlign: "center", marginTop: "30px" }}>
-        <a
+        <Button
           active="true"
           href={props.data.link}
           target="_blank"
           rel="noopener noreferrer"
+          primary="true"
         >
           Live Link
-        </a>
-        <a
+        </Button>
+        <Button
           href={props.data.clientRepo}
           target="_blank"
           rel="noopener noreferrer"
         >
           Client Repo
-        </a>
+        </Button>
         {props.data.apiRepo ? (
-          <a
+          <Button
             href={props.data.apiRepo}
             target="_blank"
             rel="noopener noreferrer"
           >
             Api Repo
-          </a>
+          </Button>
         ) : null}
       </div>
     </ImgDiv>
@@ -48,8 +50,7 @@ const Card = styled.div`
   width: 100%;
   background: lightgrey;
   color: ${({ theme }) => theme.primaryDark};
-  padding: 2rem 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   border-radius: 1rem;
   @media (min-width: ${({ theme }) => theme.mobile}) {
     display: flex;
@@ -63,31 +64,56 @@ const Card = styled.div`
     font-size: 20px;
   }
 
-  a {
+  /* a {
     border: 1px solid #374458;
     color: white;
-    /* background: ${({ theme }) => theme.primaryDark}; */
     padding: 10px;
     border-radius: 5px;
     margin: 0px 5px;
-    background: ${({ theme }) => theme.primaryDark} ;
+    background: ${props => (props.primary ? "#3af542" : "#2b343f")};
+    background: ${({ theme }) => theme.primaryDark};
+    box-shadow:0px 0px 5px -1px rgba(0,0,0,0.75);
     &:hover {
       background: ${({ theme }) => theme.primaryHover};
     }
+  } */
+`;
+
+const Button = styled.a`
+  background: ${props => (props.primary ? "#3af542" : "#2b343f")};
+  border: ${props =>
+    props.primary ? "1px solid #3af542" : "1px solid #374458"};
+  color: ${props => (props.primary ? "#2b343f" : "white")};
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0px 5px;
+  transition: 0.3s;
+  font-weight: ${props => (props.primary ? "bold" : "normal")};
+  box-shadow: ${props =>
+    props.primary ? "0px 0px 3px -1px rgba(0,0,0,0.75);" : null};
+  &:hover {
+    cursor: pointer;
+    background: ${props => (props.primary ? "#35cc3b" : "#374458")};
+    border: ${props =>
+      props.primary ? "1px solid #35cc3b" : "1px solid #374458"};
   }
 `;
 
 const DescDiv = styled.div`
   text-align: left;
   width: 100%;
+  padding: 5rem 2rem;
+  background: white;
+  border-radius: 1rem 0px 0px 1rem;
   @media (min-width: ${({ theme }) => theme.mobile}) {
-    text-align: center;
+    text-align: left;
     width: 50%;
   }
 `;
 
 const ImgDiv = styled.div`
   text-align: center;
+  padding: 2rem 1rem;
   @media (min-width: ${({ theme }) => theme.mobile}) {
     width: 50%;
   }
