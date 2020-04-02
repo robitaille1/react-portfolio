@@ -26,7 +26,7 @@ const header = () => (
 
     <Header>
       <div>
-        <Fade up>
+        <Fade up delay={1000}>
           <h1>Lucas Robitaille</h1>
           <p>
             Fullstack Developer

@@ -4,7 +4,7 @@ import Fade from "react-reveal/Fade";
 
 const bio = () => (
   <Content name="Bio">
-    <Fade up>
+    <Fade duration={2000}>
       <h2>About Me</h2>
       <p>
         I am a creative, problem solving web developer. I love working in teams

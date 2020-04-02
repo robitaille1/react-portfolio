@@ -11,6 +11,7 @@ import expressLogo from "../../Assets/icons/Express.svg";
 import mongoLogo from "../../Assets/icons/Mongo.svg";
 import postLogo from "../../Assets/icons/PostgreSQL.svg";
 import jqueryLogo from "../../Assets/icons/jQuery.svg";
+import Fade from "react-reveal/Fade";
 
 const tech = () => (
   <Wrapper>
@@ -20,23 +21,45 @@ const tech = () => (
       <TechWrapper>
         <h4>Frontend</h4>
         <Frontend>
-          <img src={htmlLogo} alt="Html Logo" />
-          <img src={cssLogo} alt="CSS Logo" />
-          <img src={jsLogo} alt="Javascript Logo" />
-          <img src={es6Logo} alt="ES6 Logo" />
-          <img src={jqueryLogo} alt="jQuery Logo" />
-          <img src={reactLogo} alt="React Logo" />
-          <img src={reduxLogo} alt="Redux Logo" />
+          <Fade delay={100}>
+            <img src={htmlLogo} alt="Html Logo" />
+          </Fade>
+          <Fade delay={600}>
+            <img src={cssLogo} alt="CSS Logo" />
+          </Fade>
+          <Fade delay={700}>
+            <img src={jsLogo} alt="Javascript Logo" />
+          </Fade>
+          <Fade delay={300}>
+            <img src={es6Logo} alt="ES6 Logo" />
+          </Fade>
+          <Fade delay={500}>
+            <img src={jqueryLogo} alt="jQuery Logo" />
+          </Fade>
+          <Fade delay={200}>
+            <img src={reactLogo} alt="React Logo" />
+          </Fade>
+          <Fade delay={400}>
+            <img src={reduxLogo} alt="Redux Logo" />
+          </Fade>
         </Frontend>
       </TechWrapper>
 
       <TechWrapper style={{ marginRight: "0px" }}>
         <h4>Backend</h4>
         <Backend>
-          <img src={nodeLogo} alt="Nodejs Logo" />
-          <img src={expressLogo} alt="Express Logo" />
-          <img src={postLogo} alt="PostgreSQL Logo" />
-          <img src={mongoLogo} alt="Mongo Logo" />
+          <Fade delay={100}>
+            <img src={nodeLogo} alt="Nodejs Logo" />
+          </Fade>
+          <Fade delay={300}>
+            <img src={expressLogo} alt="Express Logo" />
+          </Fade>
+          <Fade delay={200}>
+            <img src={postLogo} alt="PostgreSQL Logo" />
+          </Fade>
+          <Fade delay={400}>
+            <img src={mongoLogo} alt="Mongo Logo" />
+          </Fade>
         </Backend>
       </TechWrapper>
     </Tech>
