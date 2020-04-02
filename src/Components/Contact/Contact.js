@@ -8,11 +8,10 @@ const contact = () => (
     <h2>Contact Me!</h2>
     <ContactForm
       action=" https://formsubmit.co/lucas.robitaille@yahoo.com"
-      name="contact"
       method="POST"
     >
       <label htmlFor="name">Name:</label>
-      <input type="text" name="text" placeholder="John Smith" required />
+      <input type="text" name="name" placeholder="John Smith" required />
 
       <label htmlFor="email">Email:</label>
       <input type="email" name="email" placeholder="name@email.com" required />
