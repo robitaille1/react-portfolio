@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-// import Button from "../../UI/Button/Button";
 
 const project = props => (
   <Card>
@@ -63,20 +62,6 @@ const Card = styled.div`
   p {
     font-size: 20px;
   }
-
-  /* a {
-    border: 1px solid #374458;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    margin: 0px 5px;
-    background: ${props => (props.primary ? "#3af542" : "#2b343f")};
-    background: ${({ theme }) => theme.primaryDark};
-    box-shadow:0px 0px 5px -1px rgba(0,0,0,0.75);
-    &:hover {
-      background: ${({ theme }) => theme.primaryHover};
-    }
-  } */
 `;
 
 const Button = styled.a`
