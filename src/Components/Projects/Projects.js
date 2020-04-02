@@ -8,7 +8,8 @@ import travelImg from "../../Assets/mockups/travel-mockup.png";
 const projectItm = [
   {
     title: "PUERH / CAFE",
-    description: "Organize puerh teas in your collection.",
+    description:
+      "An app that helps users organize their pu’erh teas by adding collections and tasting notes. Keep track of how your teas age, and how the flavor profile changes over time",
     link: "https://puerh-cafe.lucasrobitaille.now.sh/",
     clientRepo: "https://github.com/robitaille1/puerh-cafe",
     apiRepo: "https://github.com/robitaille1/puerh-cafe-api",
@@ -18,7 +19,7 @@ const projectItm = [
   {
     title: "Hot Takes",
     description:
-      "An app to keep track of all the 'hot takes' sports commentators have, in order to see who is the most reliable.",
+      "An app to keep track of all the 'hot takes' sports commentators have, in order to see who is the most reliable. It allows users to add commentators and their takes, providing a platform to decide which commentators they should trust.",
     link: "https://hot-takes-app.lucasrobitaille.now.sh/",
     clientRepo: "https://github.com/robitaille1/hot-takes-app",
     apiRepo: "https://github.com/robitaille1/hot-takes-api",
@@ -27,7 +28,8 @@ const projectItm = [
   },
   {
     title: "Travel TV Search",
-    description: "Search for travel shows based on an input destination.",
+    description:
+      "A search engine for finding travel tv shows based on an input location. Are you planning a vacation or a trip? Use this app to find shows that will inspire your travel plans",
     link: "https://robitaille1.github.io/Travel-TV-Search/",
     clientRepo: "https://github.com/robitaille1/Travel-TV-Search",
     apiRepo: null,
