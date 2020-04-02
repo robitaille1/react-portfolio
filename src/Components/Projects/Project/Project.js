@@ -63,6 +63,10 @@ const Card = styled.div`
   h3 {
     font-size: 25px;
     margin-top: 0px;
+    @media (min-width: ${({ theme }) => theme.mobile}) {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
   }
   p {
     font-size: 20px;
