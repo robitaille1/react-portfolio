@@ -49,7 +49,6 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   padding: 0px 1em 50px 1em;
-  /* background: lightgrey; */
   align-items: center;
 
   @media (min-width: ${({ theme }) => theme.mobile}) {
@@ -63,9 +62,13 @@ const Wrapper = styled.section`
     color: ${({ theme }) => theme.primaryLight};
   }
   h4 {
-    margin: 20px auto;
+    margin: 0px;
+    background: white;
+    border-radius: 1rem 1rem 0px 0px;
+    padding: 10px;
     text-align: center;
     font-size: 30px;
+    /* border-bottom: 1px solid darkgrey; */
     color: ${({ theme }) => theme.primaryDark};
   }
 `;
@@ -85,12 +88,10 @@ const TechWrapper = styled.div`
   border-right: 1px solid lightgrey;
   border-radius: 1rem;
   width: 100%;
-  padding-top: 20px;
   margin-bottom: 1rem;
   @media (min-width: ${({ theme }) => theme.mobile}) {
     width: 50%;
     margin-right: 10px;
-    padding-top: 00px;
   }
 `;
 
@@ -98,16 +99,13 @@ const Frontend = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   @media (min-width: ${({ theme }) => theme.mobile}) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 10px;
   }
   img {
     width: 75%;
     margin: 20px auto;
     @media (min-width: ${({ theme }) => theme.mobile}) {
-      width: 15%;
       margin: 20px 10px;
     }
   }
