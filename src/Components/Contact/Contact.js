@@ -6,8 +6,11 @@ const contact = () => (
   <Wrapper name="Contact">
     <Social />
     <h2>Contact Me!</h2>
-    <ContactForm name="contact" method="POST">
-      <input type="hidden" name="form-name" value="contact" />
+    <ContactForm
+      action=" https://formsubmit.co/lucas.robitaille@yahoo.com"
+      name="contact"
+      method="POST"
+    >
       <label htmlFor="name">Name:</label>
       <input type="text" name="text" placeholder="John Smith" required />
 
