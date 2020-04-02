@@ -1,5 +1,5 @@
-export { default as Burger } from "./Burger";
-export { default as Menu } from "./Menu";
+export { default as Burger } from "./UI/Burger";
+export { default as Menu } from "./UI/Menu";
 export { default as Header } from "./Header";
 export { default as Bio } from "./Bio";
 export { default as Tech } from "./Tech";
