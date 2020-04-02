@@ -24,6 +24,24 @@
     <title>Lucas Robitaille - Portfolio</title>
   </head>
   <body>
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      netlify
+      hidden
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <label htmlFor="name">Name:</label>
+      <input type="text" name="text" placeholder="John Smith" required />
+
+      <label htmlFor="email">Email:</label>
+      <input type="email" name="email" placeholder="name@email.com" required />
+      <label htmlFor="message">Message:</label>
+      <textarea name="message" placeholder="Enter message....." />
+      <button type="submit">Send</button>
+    </form>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
