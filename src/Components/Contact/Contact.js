@@ -65,12 +65,15 @@ const ContactForm = styled.form`
     margin-top: 20px;
     padding: 10px;
     border-radius: 5px;
-    border: 2px solid ${({ theme }) => theme.primaryDark};
-    background: lightgray;
-    font-size: 16px;
+    border: 2px solid #45ff4d;
+    background: ${({ theme }) => theme.accent};
+    font-size: 20px;
     color: ${({ theme }) => theme.primaryDark};
+    transition: 0.3s;
     &:hover {
-      background: darkgray;
+      cursor: pointer;
+      background: #279c2c;
+      border: 2px solid #279c2c;
     }
   }
 `;
