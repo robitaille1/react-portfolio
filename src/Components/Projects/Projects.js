@@ -52,8 +52,12 @@ export default projects;
 const Wrapper = styled.section`
   padding: 0px 1em 00px 1em;
   @media (min-width: ${({ theme }) => theme.mobile}) {
-    padding: 0px 8em 100px 8em;
+    padding: 0px 4em 100px 4em;
   }
+  @media (min-width: ${({ theme }) => theme.medium}) {
+    padding: 50px 8em 100px 8em;
+  }
+
   h2 {
     font-size: 2.3rem;
     width: 100%;

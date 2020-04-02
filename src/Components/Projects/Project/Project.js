@@ -12,7 +12,7 @@ const project = props => (
       <div style={{ textAlign: "center" }}>
         <img src={props.data.image} alt={props.data.title + "image"} />
       </div>
-      <div style={{ textAlign: "center", marginTop: "30px" }}>
+      <ButtonDiv>
         <Button
           active="true"
           href={props.data.link}
@@ -22,23 +22,25 @@ const project = props => (
         >
           Live Link
         </Button>
-        <Button
-          href={props.data.clientRepo}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Client Repo
-        </Button>
-        {props.data.apiRepo ? (
+        <div style={{ display: "inline-block" }}>
           <Button
-            href={props.data.apiRepo}
+            href={props.data.clientRepo}
             target="_blank"
             rel="noopener noreferrer"
           >
-            Api Repo
+            Client Repo
           </Button>
-        ) : null}
-      </div>
+          {props.data.apiRepo ? (
+            <Button
+              href={props.data.apiRepo}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Api Repo
+            </Button>
+          ) : null}
+        </div>
+      </ButtonDiv>
     </ImgDiv>
   </Card>
 );
@@ -69,9 +71,10 @@ const Button = styled.a`
   border: ${props =>
     props.primary ? "1px solid #3af542" : "1px solid #374458"};
   color: ${props => (props.primary ? "#2b343f" : "white")};
+  display: inline-block;
   padding: 10px;
   border-radius: 5px;
-  margin: 0px 5px;
+  margin: ${props => (props.primary ? "0px 5px" : "10px 5px 0px 5px")};
   transition: 0.3s;
   font-weight: ${props => (props.primary ? "bold" : "normal")};
   box-shadow: ${props =>
@@ -87,12 +90,16 @@ const Button = styled.a`
 const DescDiv = styled.div`
   text-align: left;
   width: 100%;
-  padding: 5rem 2rem;
+  padding: 2rem 2rem;
   background: white;
-  border-radius: 1rem 0px 0px 1rem;
+  border-radius: 1rem 1rem 0px 0px;
   @media (min-width: ${({ theme }) => theme.mobile}) {
     text-align: left;
     width: 50%;
+    border-radius: 1rem 0px 0px 1rem;
+  }
+  @media (min-width: ${({ theme }) => theme.medium}) {
+    padding: 5rem 2rem;
   }
 `;
 
@@ -105,4 +112,9 @@ const ImgDiv = styled.div`
   img {
     width: 100%;
   }
+`;
+
+const ButtonDiv = styled.div`
+  text-align: center;
+  margin-top: 30px;
 `;

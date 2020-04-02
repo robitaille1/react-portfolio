@@ -52,6 +52,9 @@ const Wrapper = styled.section`
   align-items: center;
 
   @media (min-width: ${({ theme }) => theme.mobile}) {
+    padding: 50px 4em 100px 4em;
+  }
+  @media (min-width: ${({ theme }) => theme.medium}) {
     padding: 50px 8em 100px 8em;
   }
 
@@ -68,7 +71,6 @@ const Wrapper = styled.section`
     padding: 10px;
     text-align: center;
     font-size: 30px;
-    /* border-bottom: 1px solid darkgrey; */
     color: ${({ theme }) => theme.primaryDark};
   }
 `;
@@ -78,7 +80,6 @@ const Tech = styled.div`
   border-radius: 5px;
   @media (min-width: ${({ theme }) => theme.mobile}) {
     display: flex;
-    /* flex-direction: column; */
     flex-direction: row;
   }
 `;
