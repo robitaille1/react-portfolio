@@ -6,7 +6,10 @@ const project = props => (
     <DescDiv>
       <h3>{props.data.title}</h3>
       <p>{props.data.description}</p>
-      <p>Built with: {props.data.tech}</p>
+      <p>
+        <span style={{ fontWeight: "bold" }}>Built with:</span>{" "}
+        {props.data.tech}
+      </p>
     </DescDiv>
     <ImgDiv>
       <div style={{ textAlign: "center" }}>
