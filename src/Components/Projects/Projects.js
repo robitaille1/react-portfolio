@@ -14,7 +14,7 @@ const projectItm = [
     clientRepo: "https://github.com/robitaille1/puerh-cafe",
     apiRepo: "https://github.com/robitaille1/puerh-cafe-api",
     image: puerhImg,
-    tech: "React, Redux, Node, Express, PostgreSQL, and CSS."
+    tech: "React, Node, Express, PostgreSQL, and CSS.",
   },
   {
     title: "Hot Takes",
@@ -24,7 +24,7 @@ const projectItm = [
     clientRepo: "https://github.com/robitaille1/hot-takes-app",
     apiRepo: "https://github.com/robitaille1/hot-takes-api",
     image: hotImg,
-    tech: "React, Redux, Node, Express, PostgreSQL, and CSS."
+    tech: "React, Node, Express, PostgreSQL, and CSS.",
   },
   {
     title: "Travel TV Search",
@@ -34,8 +34,8 @@ const projectItm = [
     clientRepo: "https://github.com/robitaille1/Travel-TV-Search",
     apiRepo: null,
     image: travelImg,
-    tech: "Javascript, CSS, HTML, GoogleMaps Api, and TVMaze Api."
-  }
+    tech: "Javascript, CSS, HTML, GoogleMaps Api, and TVMaze Api.",
+  },
 ];
 
 const projects = () => (
