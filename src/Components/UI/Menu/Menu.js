@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
-import resume from "../../../Assets/LucasRobitaille-Web-Developer-Resume.pdf";
+import resume from "../../../Assets/Lucas-Robitaille-Resume.pdf";
 
 const Menu = ({ open, setOpen }) => {
   return (

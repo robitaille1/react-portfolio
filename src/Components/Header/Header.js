@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Fade } from "react-reveal";
 import { Link } from "react-scroll";
 import Social from "../Social/Social";
-import resume from "../../Assets/LucasRobitaille-Web-Developer-Resume.pdf";
+import resume from "../../Assets/Lucas-Robitaille-Resume.pdf";
 
 const header = () => (
   <Wrapper>
