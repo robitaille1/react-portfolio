@@ -1,51 +1,55 @@
 import React from "react";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
 
-const project = props => (
-  <Card>
-    <DescDiv>
-      <h3>{props.data.title}</h3>
-      <p>{props.data.description}</p>
-      <p>
-        <span style={{ fontWeight: "bold" }}>Built with:</span>{" "}
-        {props.data.tech}
-      </p>
-    </DescDiv>
-    <ImgDiv>
-      <div style={{ textAlign: "center" }}>
-        <img src={props.data.image} alt={props.data.title + "image"} />
-      </div>
-      <ButtonDiv>
-        <Button
-          active="true"
-          href={props.data.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          primary="true"
-        >
-          Live Link
-        </Button>
-        <div style={{ display: "inline-block" }}>
+const project = (props) => (
+  <Fade duration={3000}>
+    <Card>
+      <DescDiv>
+        <h3>{props.data.title}</h3>
+        <p>{props.data.description}</p>
+        <p>
+          <span style={{ fontWeight: "bold" }}>Built with:</span>{" "}
+          {props.data.tech}
+        </p>
+      </DescDiv>
+
+      <ImgDiv>
+        <div style={{ textAlign: "center" }}>
+          <img src={props.data.image} alt={props.data.title + "image"} />
+        </div>
+        <ButtonDiv>
           <Button
-            href={props.data.clientRepo}
+            active="true"
+            href={props.data.link}
             target="_blank"
             rel="noopener noreferrer"
+            primary="true"
           >
-            Client Repo
+            Live Link
           </Button>
-          {props.data.apiRepo ? (
+          <div style={{ display: "inline-block" }}>
             <Button
-              href={props.data.apiRepo}
+              href={props.data.clientRepo}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Api Repo
+              Client Repo
             </Button>
-          ) : null}
-        </div>
-      </ButtonDiv>
-    </ImgDiv>
-  </Card>
+            {props.data.apiRepo ? (
+              <Button
+                href={props.data.apiRepo}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Api Repo
+              </Button>
+            ) : null}
+          </div>
+        </ButtonDiv>
+      </ImgDiv>
+    </Card>
+  </Fade>
 );
 
 export default project;
@@ -74,22 +78,22 @@ const Card = styled.div`
 `;
 
 const Button = styled.a`
-  background: ${props => (props.primary ? "#3af542" : "#2b343f")};
-  border: ${props =>
+  background: ${(props) => (props.primary ? "#3af542" : "#2b343f")};
+  border: ${(props) =>
     props.primary ? "1px solid #3af542" : "1px solid #374458"};
-  color: ${props => (props.primary ? "#2b343f" : "white")};
+  color: ${(props) => (props.primary ? "#2b343f" : "white")};
   display: inline-block;
   padding: 10px;
   border-radius: 5px;
-  margin: ${props => (props.primary ? "0px 5px" : "10px 5px 0px 5px")};
+  margin: ${(props) => (props.primary ? "0px 5px" : "10px 5px 0px 5px")};
   transition: 0.3s;
-  font-weight: ${props => (props.primary ? "bold" : "normal")};
-  box-shadow: ${props =>
+  font-weight: ${(props) => (props.primary ? "bold" : "normal")};
+  box-shadow: ${(props) =>
     props.primary ? "0px 0px 3px -1px rgba(0,0,0,0.75);" : null};
   &:hover {
     cursor: pointer;
-    background: ${props => (props.primary ? "#35cc3b" : "#374458")};
-    border: ${props =>
+    background: ${(props) => (props.primary ? "#35cc3b" : "#374458")};
+    border: ${(props) =>
       props.primary ? "1px solid #35cc3b" : "1px solid #374458"};
   }
 `;
