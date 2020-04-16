@@ -10,7 +10,7 @@ import {
   Tech,
   Projects,
   Contact,
-  Footer
+  Footer,
 } from "./Components";
 
 function App() {
@@ -20,7 +20,6 @@ function App() {
       <>
         <GlobalStyles open={open} />
         <Header />
-        {/* <FadeDiv /> */}
         <Bio />
         <Tech />
         <Projects />
