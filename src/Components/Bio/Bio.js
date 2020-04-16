@@ -31,21 +31,24 @@ const bio = () => (
 export default bio;
 
 const Content = styled.div`
-  padding: 30px 1em 50px 1em;
+  padding: 2em 1em 4em 1em;
   text-align: left;
-  color: ${({ theme }) => theme.primaryLight};
+  color: ${({ theme }) => theme.primaryDark};
   margin-bottom: -1px;
-  margin-top: -1px;
+  margin-top: 40px;
+  clip-path: polygon(0 0, 100% 6vw, 100% 100%, 0 calc(100% - 6vw));
+  background: lightgray;
 
   @media (min-width: ${({ theme }) => theme.mobile}) {
     padding: 50px 4em 100px 4em;
+    clip-path: polygon(0 0, 100% 4vw, 100% 100%, 0 calc(100% - 4vw));
   }
   @media (min-width: ${({ theme }) => theme.medium}) {
-    padding: 50px 8em 100px 8em;
+    padding: 60px 8em 120px 8em;
   }
   h2 {
     font-size: 2.3rem;
-    color: ${({ theme }) => theme.primaryLight};
+    color: ${({ theme }) => theme.primaryDark};
     text-align: center;
   }
   p {
