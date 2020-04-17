@@ -58,16 +58,19 @@ const Card = styled.div`
   width: 100%;
   background: lightgrey;
   color: ${({ theme }) => theme.primaryDark};
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   border-radius: 1rem;
-  @media (min-width: ${({ theme }) => theme.mobile}) {
+  box-shadow: 0px 10px 20px 1px rgba(0, 0, 0, 0.75);
+
+  @media (min-width: 700px) {
     display: flex;
   }
 
   h3 {
     font-size: 25px;
     margin-top: 0px;
-    @media (min-width: ${({ theme }) => theme.mobile}) {
+
+    @media (min-width: 700px) {
       font-size: 30px;
       margin-bottom: 20px;
     }
@@ -104,7 +107,8 @@ const DescDiv = styled.div`
   padding: 2rem 2rem;
   background: white;
   border-radius: 1rem 1rem 0px 0px;
-  @media (min-width: ${({ theme }) => theme.mobile}) {
+
+  @media (min-width: 700px) {
     text-align: left;
     width: 50%;
     border-radius: 1rem 0px 0px 1rem;
@@ -117,7 +121,8 @@ const DescDiv = styled.div`
 const ImgDiv = styled.div`
   text-align: center;
   padding: 2rem 1rem;
-  @media (min-width: ${({ theme }) => theme.mobile}) {
+
+  @media (min-width: 700px) {
     width: 50%;
   }
   img {
