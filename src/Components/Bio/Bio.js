@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 
 const bio = () => (
-  <div style={{ filter: "drop-shadow(0px 10px 5px rgba(0,0,0,0.1))" }}>
+  <div style={{ filter: "drop-shadow(black 0px 5px 10px)" }}>
     <Content name="Bio">
       <Fade duration={2000}>
         <h2>About Me</h2>
