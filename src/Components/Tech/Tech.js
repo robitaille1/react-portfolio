@@ -113,6 +113,7 @@ const TechWrapper = styled.div`
   border-radius: 1rem;
   width: 100%;
   margin-bottom: 1rem;
+  box-shadow: 0px 10px 20px 1px rgba(0, 0, 0, 0.75);
   @media (min-width: ${({ theme }) => theme.mobile}) {
     width: 50%;
     margin-right: 10px;
