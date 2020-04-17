@@ -59,6 +59,7 @@ const Content = styled.div`
 
 const Pic = styled.img`
   height: 50%;
+  width: 30%;
   margin-right: 40px;
   margin-top: 10px;
   display: none;
