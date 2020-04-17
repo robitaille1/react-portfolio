@@ -4,5 +4,5 @@ export const theme = {
   primaryHover: "#374458",
   accent: "#3af542",
   mobile: "576px",
-  medium: "950px"
+  medium: "950px",
 };
