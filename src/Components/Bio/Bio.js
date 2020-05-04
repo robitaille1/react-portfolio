@@ -64,6 +64,7 @@ const Pic = styled.img`
   width: 30%;
   margin-right: 40px;
   margin-top: 10px;
+  border-radius: 100px;
   display: none;
 
   @media (min-width: 1000px) {
