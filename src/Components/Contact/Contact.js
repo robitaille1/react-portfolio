@@ -1,28 +1,81 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import emailjs from "emailjs-com";
 import Social from "../Social/Social";
 
-const contact = () => (
-  <Wrapper name="Contact">
-    <Social />
-    <h2>Contact Me!</h2>
-    <ContactForm
-      action=" https://formsubmit.co/lucas.robitaille@yahoo.com"
-      method="POST"
-    >
-      <label htmlFor="name">Name:</label>
-      <input type="text" name="name" placeholder="John Smith" required />
+const Contact = () => {
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-      <label htmlFor="email">Email:</label>
-      <input type="email" name="email" placeholder="name@email.com" required />
-      <label htmlFor="message">Message:</label>
-      <textarea name="message" placeholder="Enter message....." />
-      <button type="submit">Send</button>
-    </ContactForm>
-  </Wrapper>
-);
+  const handleChange = (name) => (e) => {
+    setValues({ ...values, [e.target.name]: e.target.value });
+  };
 
-export default contact;
+  const resetForm = () => {
+    setValues({
+      name: "",
+      email: "",
+      message: "",
+    });
+  };
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("gmail2", "portfolio", e.target, "user_geNX8Vvwl4xmoVyHFINWi")
+      .then(
+        (result) => {
+          console.log(result.text);
+          resetForm();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  }
+
+  return (
+    <Wrapper name="Contact">
+      <Social />
+      <h2>Contact Me!</h2>
+      <ContactForm onSubmit={sendEmail}>
+        <label htmlFor="name">Name:</label>
+        <input
+          type="text"
+          name="name"
+          placeholder="John Smith"
+          required
+          onChange={handleChange()}
+          value={values.name}
+        />
+
+        <label htmlFor="email">Email:</label>
+        <input
+          type="email"
+          name="email"
+          placeholder="name@email.com"
+          required
+          onChange={handleChange()}
+          value={values.email}
+        />
+        <label htmlFor="message">Message:</label>
+        <textarea
+          name="message"
+          placeholder="Enter message....."
+          onChange={handleChange()}
+          value={values.message}
+        />
+        <button type="submit">Send</button>
+      </ContactForm>
+    </Wrapper>
+  );
+};
+
+export default Contact;
 
 const Wrapper = styled.section`
   text-align: center;
