@@ -7,7 +7,7 @@ const bio = () => (
     <Content name="Bio">
       <Fade duration={2000}>
         <h2>About Me</h2>
-        <div style={{ display: "flex" }}>
+        <div style={{ display: "flex", maxWidth: "1400px", margin: "0 auto" }}>
           <Pic
             src="https://media-exp1.licdn.com/dms/image/C4D03AQGA0HOg9Hc0yQ/profile-displayphoto-shrink_200_200/0?e=1592438400&v=beta&t=Wx7_gH6zbLsH_YcAArWYiuqLt8Dt-vp7w6Ljkht9gOg"
             alt="A Picture of Me!"
@@ -40,6 +40,7 @@ const Content = styled.div`
   margin-top: 40px;
   clip-path: polygon(0 0, 100% 6vw, 100% 100%, 0 calc(100% - 6vw));
   background: lightgray;
+  width: 100%;
 
   @media (min-width: ${({ theme }) => theme.mobile}) {
     padding: 50px 4em 100px 4em;
@@ -48,6 +49,11 @@ const Content = styled.div`
   @media (min-width: ${({ theme }) => theme.medium}) {
     padding: 60px 8em 120px 8em;
   }
+
+  @media (min-width: 1550px) {
+    padding: 10rem 6rem;
+  }
+
   h2 {
     font-size: 2.3rem;
     color: ${({ theme }) => theme.primaryDark};
@@ -61,7 +67,6 @@ const Content = styled.div`
 
 const Pic = styled.img`
   height: 50%;
-  width: 30%;
   margin-right: 40px;
   margin-top: 10px;
   border-radius: 100px;
@@ -69,5 +74,8 @@ const Pic = styled.img`
 
   @media (min-width: 1000px) {
     display: block;
+  }
+  @media (min-width: 1550px) {
+    margin-top: -30px;
   }
 `;

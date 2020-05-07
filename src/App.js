@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./global";
 import { theme } from "./theme";
 import {
@@ -19,12 +19,16 @@ function App() {
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles open={open} />
-        <Header />
+        <Wrap>
+          <Header />
+        </Wrap>
         <Bio />
-        <Tech />
-        <Projects />
-        <Contact />
-        <Footer />
+        <Wrap>
+          <Tech />
+          <Projects />
+          <Contact />
+          <Footer />
+        </Wrap>
         <div>
           <Burger open={open} setOpen={setOpen} />
           <Menu open={open} setOpen={setOpen} />
@@ -36,8 +40,8 @@ function App() {
 
 export default App;
 
-// const FadeDiv = styled.div`
-//   width: 100%;
-//   height: 200px;
-//   background-image: linear-gradient(#2b343f, lightGrey);
-// `;
+const Wrap = styled.div`
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+`;
