@@ -11,6 +11,7 @@ import expressLogo from "../../Assets/icons/Express.svg";
 import mongoLogo from "../../Assets/icons/Mongo.svg";
 import postLogo from "../../Assets/icons/PostgreSQL.svg";
 import jqueryLogo from "../../Assets/icons/jQuery.svg";
+import gatsbyLogo from "../../Assets/icons/gatsby.svg";
 import Fade from "react-reveal/Fade";
 
 const tech = () => (
@@ -41,6 +42,9 @@ const tech = () => (
           </Fade>
           <Fade delay={400}>
             <img src={reduxLogo} alt="Redux Logo" />
+          </Fade>
+          <Fade delay={800}>
+            <img src={gatsbyLogo} alt="Gatsby Logo" />
           </Fade>
         </Frontend>
       </TechWrapper>
