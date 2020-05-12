@@ -144,22 +144,23 @@ const Backend = styled.div`
   display: grid;
   padding-bottom: 20px;
   @media (min-width: ${({ theme }) => theme.mobile}) {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
+    grid-template-columns: 1fr 1fr;
   }
   img {
     width: 80%;
     margin: 20px auto;
     @media (min-width: ${({ theme }) => theme.mobile}) {
-      width: 20%;
+      /* width: 20%; */
       margin: 30px auto;
     }
   }
   & :nth-child(3) {
     width: 40%;
     @media (min-width: ${({ theme }) => theme.mobile}) {
-      width: 20%;
+      /* width: 20%; */
     }
   }
 `;
