@@ -7,10 +7,11 @@ const Contact = () => {
   const [values, setValues] = useState({
     name: "",
     email: "",
-    message: "",
+    message: ""
   });
+  const [success, setSuccess] = useState(null);
 
-  const handleChange = (name) => (e) => {
+  const handleChange = name => e => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
@@ -18,7 +19,7 @@ const Contact = () => {
     setValues({
       name: "",
       email: "",
-      message: "",
+      message: ""
     });
   };
 
@@ -28,11 +29,12 @@ const Contact = () => {
     emailjs
       .sendForm("gmail2", "portfolio", e.target, "user_geNX8Vvwl4xmoVyHFINWi")
       .then(
-        (result) => {
+        result => {
           console.log(result.text);
           resetForm();
+          setSuccess(true);
         },
-        (error) => {
+        error => {
           console.log(error.text);
         }
       );
@@ -42,6 +44,7 @@ const Contact = () => {
     <Wrapper name="Contact">
       <Social />
       <h2>Contact Me!</h2>
+      {success ? <p>Your message was sent!</p> : null}
       <ContactForm onSubmit={sendEmail}>
         <label htmlFor="name">Name:</label>
         <input
@@ -91,6 +94,11 @@ const Wrapper = styled.section`
     width: 100%;
     text-align: center;
     color: ${({ theme }) => theme.primaryLight};
+    margin-bottom: 0px;
+  }
+  p {
+    color: ${({ theme }) => theme.accent};
+    margin: 0px;
   }
 `;
 
