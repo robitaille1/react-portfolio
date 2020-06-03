@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import emailjs from "emailjs-com";
 import Social from "../Social/Social";
+import Recaptcha from "react-recaptcha";
 
 const Contact = () => {
   const [values, setValues] = useState({
@@ -9,6 +10,7 @@ const Contact = () => {
     email: "",
     message: ""
   });
+  const [verified, setVerified] = useState(false);
   const [success, setSuccess] = useState(null);
 
   const handleChange = name => e => {
@@ -39,6 +41,16 @@ const Contact = () => {
         }
       );
   }
+
+  const recaptchaLoaded = () => {
+    console.log("captcha loaded");
+  };
+
+  const verifyCallback = response => {
+    if (response) {
+      setVerified(true);
+    }
+  };
 
   return (
     <Wrapper name="Contact">
@@ -72,7 +84,22 @@ const Contact = () => {
           onChange={handleChange()}
           value={values.message}
         />
-        <button type="submit">Send</button>
+        {verified === true ? (
+          <button type="submit">Send</button>
+        ) : (
+          <button disabled type="submit">
+            Send
+          </button>
+        )}
+        <Recapt>
+          <Recaptcha
+            sitekey="6Lez_f8UAAAAAFEnFdLK_q-kYhHxCPxqyPMGZ9TZ"
+            render="explicit"
+            verifyCallback={verifyCallback}
+            onloadCallback={recaptchaLoaded}
+            theme="dark"
+          />
+        </Recapt>
       </ContactForm>
     </Wrapper>
   );
@@ -142,5 +169,13 @@ const ContactForm = styled.form`
       background: #279c2c;
       border: 2px solid #279c2c;
     }
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
   }
+`;
+
+const Recapt = styled.div`
+  margin: 10px auto;
 `;
