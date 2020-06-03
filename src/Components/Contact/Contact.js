@@ -3,6 +3,7 @@ import styled from "styled-components";
 import emailjs from "emailjs-com";
 import Social from "../Social/Social";
 import Recaptcha from "react-recaptcha";
+import { useMediaQuery } from "react-responsive";
 
 const Contact = () => {
   const [values, setValues] = useState({
@@ -12,6 +13,8 @@ const Contact = () => {
   });
   const [verified, setVerified] = useState(false);
   const [success, setSuccess] = useState(null);
+
+  const isSmallDevice = useMediaQuery({ query: "(min-width: 750px)" });
 
   const handleChange = name => e => {
     setValues({ ...values, [e.target.name]: e.target.value });
@@ -50,6 +53,10 @@ const Contact = () => {
     if (response) {
       setVerified(true);
     }
+  };
+
+  const recaptchaExpired = () => {
+    setVerified(false);
   };
 
   return (
@@ -91,14 +98,29 @@ const Contact = () => {
             Send
           </button>
         )}
+
         <Recapt>
-          <Recaptcha
-            sitekey="6Lez_f8UAAAAAFEnFdLK_q-kYhHxCPxqyPMGZ9TZ"
-            render="explicit"
-            verifyCallback={verifyCallback}
-            onloadCallback={recaptchaLoaded}
-            theme="dark"
-          />
+          {isSmallDevice ? (
+            <Recaptcha
+              sitekey="6Lez_f8UAAAAAFEnFdLK_q-kYhHxCPxqyPMGZ9TZ"
+              render="explicit"
+              verifyCallback={verifyCallback}
+              onloadCallback={recaptchaLoaded}
+              expiredCallback={recaptchaExpired}
+              theme="dark"
+              size="normal"
+            />
+          ) : (
+            <Recaptcha
+              sitekey="6Lez_f8UAAAAAFEnFdLK_q-kYhHxCPxqyPMGZ9TZ"
+              render="explicit"
+              verifyCallback={verifyCallback}
+              onloadCallback={recaptchaLoaded}
+              expiredCallback={recaptchaExpired}
+              theme="dark"
+              size="compact"
+            />
+          )}
         </Recapt>
       </ContactForm>
     </Wrapper>
