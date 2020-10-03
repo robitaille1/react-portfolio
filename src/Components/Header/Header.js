@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Fade } from "react-reveal";
 import { Link } from "react-scroll";
 import Social from "../Social/Social";
-import resume from "../../Assets/Lucas-Robitaille-Resume.pdf";
+// import resume from "../../Assets/Lucas-Robitaille-Resume.pdf";
 
 const header = () => (
   <Wrapper>
@@ -17,9 +17,9 @@ const header = () => (
       <Link to="Contact" spy={true} smooth={true} duration={3000}>
         Contact
       </Link>
-      <a href={resume} target="_blank" rel="noopener noreferrer">
+      {/* <a href={resume} target="_blank" rel="noopener noreferrer">
         Resume
-      </a>
+      </a> */}
     </Navigation>
 
     <Social />
