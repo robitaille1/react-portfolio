@@ -8,10 +8,6 @@ const bio = () => (
       <Fade duration={2000}>
         <h2>About Me</h2>
         <div style={{ display: "flex", maxWidth: "1400px", margin: "0 auto" }}>
-          <Pic
-            src="https://media-exp1.licdn.com/dms/image/C4D03AQGA0HOg9Hc0yQ/profile-displayphoto-shrink_200_200/0?e=1592438400&v=beta&t=Wx7_gH6zbLsH_YcAArWYiuqLt8Dt-vp7w6Ljkht9gOg"
-            alt="A Picture of Me!"
-          />
           <div style={{ textAlign: "left" }}>
             <p>
               I am a creative, problem solving web developer. I love working in
