@@ -60,18 +60,3 @@ const Content = styled.div`
     margin-top: 5px;
   }
 `;
-
-const Pic = styled.img`
-  height: 50%;
-  margin-right: 40px;
-  margin-top: 10px;
-  border-radius: 100px;
-  display: none;
-
-  @media (min-width: 1000px) {
-    display: block;
-  }
-  @media (min-width: 1550px) {
-    margin-top: -30px;
-  }
-`;
