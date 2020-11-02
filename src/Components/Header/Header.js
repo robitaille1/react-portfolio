@@ -34,7 +34,7 @@ const header = () => (
               <span role="img" aria-label="pin">
                 &#x1F4CD;
               </span>
-              Austin, Texas
+              Los Angeles, CA
             </Location>
           </p>
         </Fade>
