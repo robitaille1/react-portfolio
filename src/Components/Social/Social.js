@@ -13,13 +13,13 @@ const social = () => (
     <a href="mailto:lucas.robitaille@yahoo.com">
       <i className="link far fa-envelope"></i>
     </a>
-    <a
+    {/* <a
       href="https://www.linkedin.com/in/lucas-robitaille/"
       target="_blank"
       rel="noopener noreferrer"
     >
       <i className="link fab fa-linkedin"></i>
-    </a>
+    </a> */}
     <a
       href="https://angel.co/lucas-robitaille"
       target="_blank"
