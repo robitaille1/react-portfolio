@@ -29,7 +29,7 @@ const header = () => (
         <Fade up delay={1000}>
           <h1>Lucas Robitaille</h1>
           <p>
-            Fullstack Developer
+            Software Engineer
             <Location>
               <span role="img" aria-label="pin">
                 &#x1F4CD;
