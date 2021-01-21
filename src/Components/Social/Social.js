@@ -10,7 +10,7 @@ const social = () => (
     >
       <i className="fab fa-github"></i>
     </a>
-    <a href="mailto:lucas.robitaille@yahoo.com">
+    <a href="mailto:lucas@robitaille.xyz">
       <i className="link far fa-envelope"></i>
     </a>
     {/* <a
