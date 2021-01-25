@@ -42,12 +42,6 @@ const Menu = ({ open, setOpen }) => {
         </span>
         Contact
       </Link>
-      {/* <a href={resume} target="_blank" rel="noopener noreferrer">
-        <span role="img" aria-label="resume">
-          &#x1F4C4;
-        </span>
-        Resume
-      </a> */}
     </StyledMenu>
   );
 };
